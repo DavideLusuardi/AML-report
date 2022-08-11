@@ -9,6 +9,8 @@
   \usepackage{caption}
   \usepackage{subcaption}
   \usepackage{hyperref}
+  \usepackage[sorting=none]{biblatex}
+  \addbibresource{biblio.bib}
 \else
 \fi
 
@@ -75,7 +77,8 @@
 
 
 \input{01_introduction}
-\input{02_task}
+\input{02_DeepProbLog}
+\input{03_task}
 \input{03_methodologies_implementation}
 \input{04_results}
 \input{05_conclusions}
@@ -94,37 +97,40 @@
 % http://mirror.ctan.org/biblio/bibtex/contrib/doc/
 % The IEEEtran BibTeX style support page is at:
 % http://www.michaelshell.org/tex/ieeetran/bibtex/
-%\bibliographystyle{IEEEtran}
+% \bibliographystyle{IEEEtran}
 % argument is your BibTeX string definitions and bibliography database(s)
 %\bibliography{IEEEabrv,../bib/paper}
 %
 % <OR> manually copy in the resultant .bbl file
 % set second argument of \begin to the number of references
 % (used to reserve space for the reference number labels box)
-\begin{thebibliography}{1}
 
-\bibitem{Yellow-Spaceship}
-https://github.com/ph3nix-cpu/Yellow-Spaceship
+\printbibliography %Prints bibliography
 
-\bibitem{NEAT}
-K. O. Stanley and R. Miikkulainen, "Evolving Neural Networks through Augmenting Topologies," in Evolutionary Computation, vol. 10, no. 2, pp. 99-127, June 2002, doi: 10.1162/106365602320169811.
+% \begin{thebibliography}{1}
 
-\bibitem{GP}
-Koza, John R. "Hierarchical genetic algorithms operating on populations of computer programs." IJCAI. Vol. 89. 1989.
+% \bibitem{Yellow-Spaceship}
+% https://github.com/ph3nix-cpu/Yellow-Spaceship
 
-\bibitem{NEAT-Python}
-https://neat-python.readthedocs.io/en/latest/index.html
+% \bibitem{NEAT}
+% K. O. Stanley and R. Miikkulainen, "Evolving Neural Networks through Augmenting Topologies," in Evolutionary Computation, vol. 10, no. 2, pp. 99-127, June 2002, doi: 10.1162/106365602320169811.
 
-\bibitem{DEAP}
-https://deap.readthedocs.io/en/master/index.html
+% \bibitem{GP}
+% Koza, John R. "Hierarchical genetic algorithms operating on populations of computer programs." IJCAI. Vol. 89. 1989.
 
-\bibitem{PyGame}
-https://www.pygame.org/docs/
+% \bibitem{NEAT-Python}
+% https://neat-python.readthedocs.io/en/latest/index.html
 
-\bibitem{repository}
-https://github.com/samuelbortolin/Bio-Inspired-Spaceship
+% \bibitem{DEAP}
+% https://deap.readthedocs.io/en/master/index.html
 
-\end{thebibliography}
+% \bibitem{PyGame}
+% https://www.pygame.org/docs/
+
+% \bibitem{repository}
+% https://github.com/samuelbortolin/Bio-Inspired-Spaceship
+
+% \end{thebibliography}
 
 \end{document}
 

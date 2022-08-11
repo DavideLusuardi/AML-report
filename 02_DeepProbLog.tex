@@ -1,1 +1,11 @@
 \section{DeepProbLog}
+We explain better the basics of probabilistic logic programming using ProbLog and how to extend it to obtain DeepProbLog.
+A ProbLog program is made of a set of ground probabilistic facts $\mathcal{F}$ of the form $p :: f$ where $p$ is a probability and $f$ is a ground atom, and a set of rules $\mathcal{R}$.
+One extension introduced for convenience is the annotated disjunction (AD) that is an expression of the form 
+\begin{equation}
+\label{eq:ad}
+    p_1 :: h_1 ; \dots ; p_n :: h_n {:-} b_1, \dots, b_m.
+\end{equation}
+where the $p_i$ are probabilities that $\sum{}{}{p_i} = 1$ and $h_i$ and $b_j$ are atoms. Given the AD of Eq. \ref{eq:ad}, when all $b_i$ hold then $h_j$ will be true with probability $p_j$ with all other $h_i$ false.
+TODO: finire
+
