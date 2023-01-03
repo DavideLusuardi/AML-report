@@ -6,6 +6,8 @@
   \usepackage{graphicx}
   \graphicspath{ {./images/} }
   \usepackage{amsmath}
+  \DeclareMathOperator*{\argmax}{arg\,max}
+  \DeclareMathOperator*{\argmin}{arg\,min}
   \usepackage{caption}
   \usepackage{subcaption}
   \usepackage{hyperref}
@@ -55,7 +57,7 @@
 
   DeepProbLog is a framework where general-purpose neural networks and expressive probabilistic-logical modeling and reasoning are integrated in a way that exploits the full expressiveness and strengths of both worlds and can be trained end-to-end based on examples.
 
-  The aim of this report is to show how to solve AI tasks that require the integration of high-level reasoning and low-level perception. We focus on the multi-digit MNIST octal-division task that consists in the division between two lists of MNIST digits representing multi-digit octal numbers. Using DeepProbLog we are able to solve the task given that supervision is only present at the output side of the probabilistic reasoner and considering that the approach can be extended to multi-digit numbers without being explicitly trained on them.  
+  The aim of this report is to show how to solve AI tasks that require the integration of high-level reasoning and low-level perception. We focus on the multi-digit MNIST octal-division task that consists in computing the division between two lists of MNIST digits representing multi-digit octal numbers. Using DeepProbLog we are able to solve the task given that supervision is only present at the output side of the probabilistic reasoner and considering that the approach can be extended to multi-digit numbers without being explicitly trained on them.  
 \end{abstract}
 
 % Note that keywords are not normally used for peerreview papers.

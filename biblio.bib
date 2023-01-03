@@ -32,3 +32,95 @@
     title = {ProbLog: A Probabilistic Prolog and Its Application in Link Discovery},
     journal = {IJCAI}
 }
+
+
+@Article{DeRaedt2015,
+    author={De Raedt, Luc and Kimmig, Angelika},
+    title={Probabilistic (logic) programming concepts},
+    journal={Machine Learning},
+    year={2015},
+    month={Jul},
+    day={01},
+    volume={100},
+    number={1},
+    pages={5-47},
+    abstract={A multitude of different probabilistic programming languages exists today, all extending a traditional programming language with primitives to support modeling of complex, structured probability distributions. Each of these languages employs its own probabilistic primitives, and comes with a particular syntax, semantics and inference procedure. This makes it hard to understand the underlying programming concepts and appreciate the differences between the different languages. To obtain a better understanding of probabilistic programming, we identify a number of core programming concepts underlying the primitives used by various probabilistic languages, discuss the execution mechanisms that they require and use these to position and survey state-of-the-art probabilistic languages and their implementation. While doing so, we focus on probabilistic extensions of logic programming languages such as Prolog, which have been considered for over 20 years.},
+    issn={1573-0565},
+    doi={10.1007/s10994-015-5494-z},
+    url={https://doi.org/10.1007/s10994-015-5494-z}
+}
+
+@inproceedings{SDD_Darwiche,
+    author = {Darwiche, Adnan},
+    title = {SDD: A New Canonical Representation of Propositional Knowledge Bases},
+    year = {2011},
+    isbn = {9781577355144},
+    publisher = {AAAI Press},
+    abstract = {We identify a new representation of propositional knowledge bases, the Sentential Decision Diagram (SDD), which is interesting for a number of reasons. First, it is canonical in the presence of additional properties that resemble reduction rules of OBDDs. Second, SDDs can be combined using any Boolean operator in polytime. Third, CNFs with n variables and treewidth w have canonical SDDs of size O(n2w), which is tighter than the bound on OBDDs based on pathwidth. Finally, every OBDD is an SDD. Hence, working with the latter does not preclude the former.},
+    booktitle = {Proceedings of the Twenty-Second International Joint Conference on Artificial Intelligence - Volume Volume Two},
+    pages = {819–826},
+    numpages = {8},
+    location = {Barcelona, Catalonia, Spain},
+    series = {IJCAI'11}
+}
+
+@incollection{Frazier,
+    title = {Learning From Entailment: An Application to Propositional Horn Sentences},
+    booktitle = {Machine Learning Proceedings 1993},
+    publisher = {Morgan Kaufmann},
+    address = {San Francisco (CA)},
+    pages = {120-127},
+    year = {1993},
+    isbn = {978-1-55860-307-3},
+    doi = {https://doi.org/10.1016/B978-1-55860-307-3.50022-8},
+    url = {https://www.sciencedirect.com/science/article/pii/B9781558603073500228},
+    author = {Michael Frazier and Leonard Pitt},
+    abstract = {Let ϕ be an unknown theory. Can ϕ be efficiently inferred given examples of statements that ϕ entails and statements that ϕ does not entail? It is shown that if ϕ is a propositional Horn sentence, then ϕ can be efficiently learned in this model when the entailed statements are also Horn sentences. An application of the learning algorithm to the area of approximate entailment is discussed.}
+}
+
+@InProceedings{Gutmann,
+    author="Gutmann, Bernd
+    and Kimmig, Angelika
+    and Kersting, Kristian
+    and De Raedt, Luc",
+    editor="Daelemans, Walter
+    and Goethals, Bart
+    and Morik, Katharina",
+    title="Parameter Learning in Probabilistic Databases: A Least Squares Approach",
+    booktitle="Machine Learning and Knowledge Discovery in Databases",
+    year="2008",
+    publisher="Springer Berlin Heidelberg",
+    address="Berlin, Heidelberg",
+    pages="473--488",
+    abstract="We introduce the problem of learning the parameters of the probabilistic database ProbLog. Given the observed success probabilities of a set of queries, we compute the probabilities attached to facts that have a low approximation error on the training examples as well as on unseen examples. Assuming Gaussian error terms on the observed success probabilities, this naturally leads to a least squares optimization problem. Our approach, called LeProbLog, is able to learn both from queries and from proofs and even from both simultaneously. This makes it flexible and allows faster training in domains where the proofs are available. Experiments on real world data show the usefulness and effectiveness of this least squares calibration of probabilistic databases.",
+    isbn="978-3-540-87479-9"
+}
+
+@inproceedings{aProbLog,
+    author = {Kimmig, Angelika and Broeck, Guy Van den and Raedt, Luc De},
+    title = {An Algebraic Prolog for Reasoning about Possible Worlds},
+    year = {2011},
+    publisher = {AAAI Press},
+    abstract = {We introduce aProbLog, a generalization of the probabilistic logic programming language ProbLog. An aProbLog program consists of a set of definite clauses and a set of algebraic facts; each such fact is labeled with an element of a semiring. A wide variety of labels is possible, ranging from probability values to reals (representing costs or utilities), polynomials, Boolean functions or data structures. The semiring is then used to calculate labels of possible worlds and of queries.We formally define the semantics of aProbLog and study the aProbLog inference problem, which is concerned with computing the label of a query. Two conditions are introduced that allow one to simplify the inference problem, resulting in four different algorithms and settings. Representative basic problems for each of these four settings are: is there a possible world where a query is true (SAT), how many such possible worlds are there (\#SAT), what is the probability of a query being true (PROB), and what is the most likely world where the query is true (MPE). We further illustrate these settings with a number of tasks requiring more complex semirings.},
+    booktitle = {Proceedings of the Twenty-Fifth AAAI Conference on Artificial Intelligence},
+    pages = {209–214},
+    numpages = {6},
+    location = {San Francisco, California},
+    series = {AAAI'11}
+}
+
+@inproceedings{gSemiring,
+    author = {Eisner, Jason},
+    title = {Parameter Estimation for Probabilistic Finite-State Transducers},
+    year = {2002},
+    publisher = {Association for Computational Linguistics},
+    address = {USA},
+    url = {https://doi.org/10.3115/1073083.1073085},
+    doi = {10.3115/1073083.1073085},
+    abstract = {Weighted finite-state transducers suffer from the lack of a training algorithm. Training is even harder for transducers that have been assembled via finite-state operations such as composition, minimization, union, concatenation, and closure, as this yields tricky parameter tying. We formulate a "parameterized FST" paradigm and give training algorithms for it, including a general bookkeeping trick ("expectation semirings") that cleanly and efficiently computes expectations and gradients.},
+    booktitle = {Proceedings of the 40th Annual Meeting on Association for Computational Linguistics},
+    pages = {1–8},
+    numpages = {8},
+    location = {Philadelphia, Pennsylvania},
+    series = {ACL '02}
+}
