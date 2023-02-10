@@ -13,4 +13,9 @@ dec2oct(S,X) :- X > 0 ,
                S0 is X mod 8 , 
                S is S0 + S1 * 10 .
 
-division(X,Y,Z) :- number(X,Xdec), number(Y,Ydec), Ydec > 0, Zdec is Xdec//Ydec, dec2oct(Z, Zdec).
+division(X,Y,Z) :- number(X,Xdec), 
+                   number(Y,Ydec), 
+                   Ydec > 0, 
+                   Zdec is Xdec//Ydec, 
+                   dec2oct(Z, Zdec).
+
