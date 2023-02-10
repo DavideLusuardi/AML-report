@@ -1,18 +1,26 @@
 \section{Conclusions}
-As demonstrated, NEAT and GP are very good approaches able to find a way to play the game well. Even
-though, across multiple runs, NEAT seems to obtain more stable results, GP has
-proved to have a bigger potential thanks to the tree-structured individuals and overall
-manages to reach very good results.
+\label{sec:conclusions}
 
-One of the issues that we encountered using GP is how to manage the different input types:
-one may implement functions taking into account inputs of different types or, alternatively,
-can use a strongly typed primitive set as we have done.
+As illustrated in the previous sections, DeepProbLog is a powerful framework where general-purpose neural
+networks and expressive probabilistic-logical modeling and reasoning are integrated in a way that exploits the full expressiveness and strengths of both worlds. For these reasons, the framework is suitable for solving problems where both low-level data processing using deep networks and high-level reasoning using symbolic approaches are needed.
 
-Another issue is that the execution of the algorithms takes a lot of time and
-computational resources, especially when the frame threshold is reached. Due to this, the
-number of runs and individuals should be limited.
+After an explanation of DeepProbLog as an extension of the ProbLog language, we have illustrated how to create and train a DeepProbLog program to solve the multi-digit MNIST octal-division task. Similarly, many more AI tasks that require both low-level perception and high-level reasoning can be efficiently solved using the DeepProbLog language.
+% DeepProbLog neural probabilistic logic programming language.
 
-In the end, with this project we learned a lot about this field, in particular how it is possible to
-apply bio-inspired techniques to real-world problems and benefit from them. They have
-proved to be a valid alternative to classic back-propagation algorithms for ANN and we have learned how to
-apply them to Reinforcement Learning tasks using the fitness as a reward.
+% As demonstrated, NEAT and GP are very good approaches able to find a way to play the game well. Even
+% though, across multiple runs, NEAT seems to obtain more stable results, GP has
+% proved to have a bigger potential thanks to the tree-structured individuals and overall
+% manages to reach very good results.
+
+% One of the issues that we encountered using GP is how to manage the different input types:
+% one may implement functions taking into account inputs of different types or, alternatively,
+% can use a strongly typed primitive set as we have done.
+
+% Another issue is that the execution of the algorithms takes a lot of time and
+% computational resources, especially when the frame threshold is reached. Due to this, the
+% number of runs and individuals should be limited.
+
+% In the end, with this project we learned a lot about this field, in particular how it is possible to
+% apply bio-inspired techniques to real-world problems and benefit from them. They have
+% proved to be a valid alternative to classic back-propagation algorithms for ANN and we have learned how to
+% apply them to Reinforcement Learning tasks using the fitness as a reward.

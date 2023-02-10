@@ -36,12 +36,13 @@ The neural network could be of any type, e.g. a recurrent or a convolutional net
 Note that a neural AD realizes a regular AD $p_1 :: q(\vec{t}; u_1); \dots; p_n :: q(\vec{t}; u_n) :- b_1; \dots; b_m$ after a forward pass on the neural network.
 
 \subsection{DeepProbLog inference}
-Inference in DeepProbLog closely follows that in ProbLog. ProbLog inference proceeds in four steps, the first step is the grounding step, in which the logic program is grounded with respect to the query, generating all ground instances of clauses the query depends on. This step uses backward reasoning to determine which ground rules are relevant to derive the truth value of the query, and may perform additional logical simplifications that do not affect the query’s probability.
+Inference in DeepProbLog closely follows that in ProbLog. ProbLog inference proceeds in four steps, the first step is the grounding step, in which the logic program is grounded with respect to the query, generating all ground instances of clauses the query depends on. This step uses backward reasoning to determine which ground rules are relevant to derive the truth value of the query, and may perform additional logical simplifications that do not affect the query's probability.
 
-The second step rewrites the ground logic program into a formula in propositional logic that defines the truth value of the query in terms of the truth values of probabilistic facts. We can calculate the query success probability by performing weighted model counting (WMC) on this logic formula even if it is not efficient.
+The second step rewrites the ground logic program into a formula in propositional logic that defines the truth value of the query in terms of the truth values of probabilistic facts. We could calculate the query success probability by performing weighted model counting (WMC) on this logic formula but it is not efficient.
 
 The third step is knowledge compilation that compiles the logic formula into a Sentential Decision Diagram (SDD, \cite{SDD_Darwiche}), a form that allows for efficient weighted model counting. SDDs are a subset of deterministic decomposable negational normal forms (d-DNNFs) and as these ones allow for polytime model counting.
 % they also support polytime conjunction, dis-junction and negation while being more succinct than OBDDs (Darwiche[22]).
+% SDDs are the most succinct suitable representation available today
 
 The fourth step transforms the SDD into an arithmetic circuit (AC). The AC has the probabilities of the probabilistic facts on the leaves and is obtained replacing the OR nodes with addition and the AND nodes by multiplication. The AC is then evaluated to calculate the WMC.
 

@@ -5,7 +5,7 @@ The multi-digit MNIST octal-division task can be formulated as follows: given tw
 % With this task, we can test the 
 % while the test set contains multi-digit numbers. In this way, the framework is able to show the high-level reasoning capabilities
 
-The main goal is to define the predicate \texttt{division(X,Y,Z)}, where X and Y are lists of images of handwritten digits from the MNIST dataset that represent two base-8 numbers and Z is the base-8 number corresponding to the result of the division between X and Y. While such a predicate can be learned directly by a standard neural classifier, such an approach cannot incorporate background knowledge such as the definition of the octal division between two numbers.
+The main goal in the DeepProbLog program is to define the predicate \texttt{division(X,Y,Z)}, where X and Y are lists of images of handwritten digits from the MNIST dataset that represent two base-8 numbers and Z is the base-8 number corresponding to the result of the division between X and Y. While such a predicate can be learned directly by a standard neural classifier, such an approach cannot incorporate background knowledge such as the definition of the octal division between two numbers.
 %  and as a consequence requires more iterations to converge, multi-digit numbers in the test set, larger test set. % TODO
 
 \begin{figure}[ht]
@@ -44,28 +44,3 @@ In our implementation, the neural network model used to classify the MNIST digit
 After these layers, the model has 3 fully connected layers of sizes 120, 84 and 8 with a rectified linear unit layer between them. The last layer is followed by a softmax layer in order to get a probability value.
 The learning process optimizes the cross-entropy loss between the predicted and desired query probabilities as implemented by the function $train\_model$ that is part of the DeepProbLog framework, performing gradient accumulation instead of mini-batching.
 As optimizer we used Adam with a learning rate of 0.001 for the network parameters and SGD for the logic parameters.
-
-
-
-\subsection{Results}
-% TODO: to conclude
-
-\begin{figure*}[t]
-    \centering
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centerline{\includegraphics[scale=0.4]{validation_accuracy.png}}
-        \caption{Validation accuracy}
-        \label{fig:acc}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.45\textwidth}
-        \centerline{\includegraphics[scale=0.4]{training_loss.png}}
-        \caption{Training loss}
-        \label{fig:loss}
-    \end{subfigure}
-    \caption{Multi-digit MNIST octal-division task learning curves: accuracy on the multi-digit test set on the left \ref{fig:acc}, training loss on the single-digit training set on the right \ref{fig:loss}.}
-    \label{fig:training_curves}
-\end{figure*}
-
-Fig. \ref{fig:training_curves} shows the learning curves for the DeepProbLog program.
-DeepProbLog managed to achieve $97\%$ of accuracy on the validation set after TODO iterations as shown in Fig. \ref{fig:acc}. The learning curve is shown in Fig. \ref{fig:loss}.
