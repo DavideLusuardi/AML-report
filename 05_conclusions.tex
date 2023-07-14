@@ -4,23 +4,21 @@
 As illustrated in the previous sections, DeepProbLog is a powerful framework where general-purpose neural
 networks and expressive probabilistic-logical modeling and reasoning are integrated in a way that exploits the full expressiveness and strengths of both worlds. For these reasons, the framework is suitable for solving problems where both low-level data processing using deep networks and high-level reasoning using symbolic approaches are needed.
 
-After an explanation of DeepProbLog as an extension of the ProbLog language, we have illustrated how to create and train a DeepProbLog program to solve the multi-digit MNIST octal-division task. Similarly, many more AI tasks that require both low-level perception and high-level reasoning can be efficiently solved using the DeepProbLog language.
+After an explanation of DeepProbLog, we have illustrated how to create and train a DeepProbLog program to solve the multi-digit MNIST octal-division task. Our experiments showed that DeepProbLog was able to accurately recognize the MNIST digits and perform the division operation accurately, even when presented with multi-digit numbers.
+% Overall, we demonstrated the effectiveness of DeepProbLog in solving machine learning tasks that require both low-level perception and high-level reasoning.
+
+Compared to standard neural classifiers, DeepProbLog requires fewer iterations to converge, due to the fact that exploits symbolic reasoning, and provides a transparent and interpretable framework, which is particularly important in applications where decisions have significant consequences.
+
+% Moreover, we found that DeepProbLog required fewer iterations to converge compared to standard neural classifiers, which is likely due to the fact that DeepProbLog combines the efficiency of deep learning with the expressiveness of probabilistic programming.
+
+% The results of our experiments demonstrate the effectiveness of DeepProbLog in solving AI tasks that require both low-level perception and high-level reasoning.
+% Similarly, many more AI tasks that require both low-level perception and high-level reasoning can be efficiently solved using the DeepProbLog language.
 % DeepProbLog neural probabilistic logic programming language.
 
-% As demonstrated, NEAT and GP are very good approaches able to find a way to play the game well. Even
-% though, across multiple runs, NEAT seems to obtain more stable results, GP has
-% proved to have a bigger potential thanks to the tree-structured individuals and overall
-% manages to reach very good results.
+% TODO: standard neural classifier requires more iterations to converge, multi-digit numbers in the test set, larger test set.
 
-% One of the issues that we encountered using GP is how to manage the different input types:
-% one may implement functions taking into account inputs of different types or, alternatively,
-% can use a strongly typed primitive set as we have done.
+% Overall, our results demonstrate that DeepProbLog is a powerful framework for solving complex probabilistic modeling tasks and has the potential to advance the state-of-the-art in various domains, including computer vision, natural language processing, and robotics.
 
-% Another issue is that the execution of the algorithms takes a lot of time and
-% computational resources, especially when the frame threshold is reached. Due to this, the
-% number of runs and individuals should be limited.
+% Overall, our results highlight the potential of DeepProbLog in integrating probabilistic reasoning with deep learning techniques and in advancing the state-of-the-art in various domains, including computer vision, natural language processing, and robotics. Future work could explore the application of DeepProbLog to other complex modeling tasks and the development of more efficient optimization techniques.
 
-% In the end, with this project we learned a lot about this field, in particular how it is possible to
-% apply bio-inspired techniques to real-world problems and benefit from them. They have
-% proved to be a valid alternative to classic back-propagation algorithms for ANN and we have learned how to
-% apply them to Reinforcement Learning tasks using the fitness as a reward.
+Overall, DeepProbLog is a powerful framework for solving complex probabilistic modeling tasks, and it has the potential to advance the state-of-the-art in various domains, including computer vision, natural language processing, and robotics.

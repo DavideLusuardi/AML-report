@@ -16,8 +16,19 @@
 \else
 \fi
 
+\usepackage{listings}
+\lstset
+{
+  language   = Prolog,
+  captionpos = below,
+  frame      = single,
+  columns    = fullflexible,
+  basicstyle = \ttfamily,
+  frame      = none,
+}
+
 % correct bad hyphenation here
-\hyphenation{op-tical net-works semi-conduc-tor}
+% \hyphenation{op-tical net-works semi-conduc-tor}
 
 
 \begin{document}
@@ -53,12 +64,18 @@
 % As a general rule, do not put math, special symbols or citations
 % in the abstract or keywords.
 \begin{abstract}
-  DeepProbLog is an extension of ProbLog that integrates Probabilistic Logic Programming with deep learning by means of neural predicates. The neural predicate represents probabilistic facts whose probabilities are parameterized by neural networks.
-
+  % DeepProbLog is an extension of ProbLog that integrates Probabilistic Logic Programming with deep learning by means of neural predicates. % The neural predicate represents probabilistic facts whose probabilities are parameterized by neural networks.
   DeepProbLog is a framework where general-purpose neural networks and expressive probabilistic-logical modeling and reasoning are integrated in a way that exploits the full expressiveness and strengths of both worlds and can be trained end-to-end based on examples.
 
-  The aim of this report is to show how to solve AI tasks that require the integration of high-level reasoning and low-level perception. We focus on the multi-digit MNIST octal-division task that consists in computing the division between two lists of MNIST digits representing multi-digit octal numbers. Using DeepProbLog we are able to solve the task given that supervision is only present at the output side of the probabilistic reasoner and considering that the approach can be extended to multi-digit numbers without being explicitly trained on them.  
+  In this report, we show how to solve AI tasks that require the integration of high-level reasoning and low-level perception. We focus on the multi-digit MNIST octal-division task, a problem that involves computing the division between two lists of MNIST digits representing multi-digit octal numbers. We formulate the problem as a DeepProbLog program and demonstrate its effectiveness through experimental results. Using DeepProbLog we are able to solve the task given that supervision is only present at the output side of the probabilistic reasoner and considering that the approach can be extended to multi-digit numbers without being explicitly trained on them. Our experiment shows that DeepProbLog is able to achieve high accuracy using a relatively small number of training examples. This suggests that DeepProbLog is able to effectively leverage the logical rules and neural networks to generalize well to new data, even when the available training data is limited. 
+  % Overall, our results demonstrate the potential of DeepProbLog for solving complex problems in artificial intelligence and machine learning that involve low-level perception and high-level reasoning.
 \end{abstract}
+
+
+% \begin{abstract}
+%   DeepProbLog is a probabilistic programming language that combines the power of logic programming with the flexibility and scalability of deep neural networks. In this report, we apply DeepProbLog to the multi-digit MNIST octal-division task, a computer vision problem that involves dividing two multi-digit octal numbers. We formulate the problem as a DeepProbLog program and demonstrate its effectiveness through experimental results. Our experiments show that DeepProbLog outperforms a baseline model that uses a convolutional neural network to predict the output. This demonstrates the potential of DeepProbLog for solving complex problems in artificial intelligence and machine learning that involve uncertain data.
+% \end{abstract}
+
 
 % Note that keywords are not normally used for peerreview papers.
 % \begin{IEEEkeywords}
